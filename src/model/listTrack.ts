@@ -1,0 +1,4 @@
+class ListTrack{
+
+    data: Track[];
+}

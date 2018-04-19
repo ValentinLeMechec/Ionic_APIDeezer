@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+  <ion-searchbar type="text" placeholder="Artist" (keyup.enter)='onSearchArtist($event)'></ion-searchbar>
+  <ion-list>
+    <ion-card  *ngFor="let artist of listArtist" (click)='onClickCard(artist)'>
+      <img src="{{artist.picture_medium}}"/>
+      <div class="card-title">{{artist.name}}</div>
+    </ion-card>
+  </ion-list>
+</ion-content>

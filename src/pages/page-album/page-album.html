@@ -1,0 +1,29 @@
+<!--
+  Generated template for the PageAlbumPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>pageAlbum</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+      <ion-card class="card-background-page">
+        
+        <div class="card-title">{{album.title}}</div>
+        <img src="{{album.cover_medium}}"/>
+          
+      </ion-card>
+        <ion-card *ngFor="let track of listTrack" >
+          <audio src="{{track.preview}}" type="audio/mpeg" controls=""></audio>
+          <div class="card-title">{{track.title}}</div>
+        </ion-card>
+      </ion-list>
+</ion-content>
